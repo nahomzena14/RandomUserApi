@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="4dp"
+    app:cardElevation="4dp"
+    android:layout_marginHorizontal="4dp"
+    app:cardCornerRadius="24dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAFFC940">
+
+        <ImageView
+            android:id="@+id/user_imageview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".35" />
+
+        <TextView
+            android:id="@+id/user_name_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/dob_textView"
+            app:layout_constraintTop_toBottomOf="@+id/user_imageview"
+            />
+
+        <TextView
+            android:id="@+id/dob_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date of Birth"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/gender_textView"
+            app:layout_constraintTop_toBottomOf="@+id/user_name_textView"
+            />
+
+        <TextView
+            android:id="@+id/gender_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/location_textView"
+            app:layout_constraintTop_toBottomOf="@+id/dob_textView"
+            />
+
+        <TextView
+            android:id="@+id/location_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/phone_textView"
+            app:layout_constraintTop_toBottomOf="@+id/gender_textView"
+            />
+
+        <TextView
+            android:id="@+id/phone_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/email_textView"
+            app:layout_constraintTop_toBottomOf="@+id/location_textView"
+            />
+
+        <TextView
+            android:id="@+id/email_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/phone_textView"
+            android:hint="Email"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
