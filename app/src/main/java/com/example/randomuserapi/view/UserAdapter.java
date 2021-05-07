@@ -57,7 +57,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         //image*/
         Glide.with(holder.binding.getRoot())
                 .applyDefaultRequestOptions(RequestOptions.centerCropTransform())
-                .load(user.getPicture().getMedium())
+                .load(user.getPicture().getLarge())
                 .into(holder.binding.userImageview);
 
 
